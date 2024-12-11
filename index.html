@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ekolojik Kredi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>♻️ Ekolojik Kredi</h1>
+    </header>
+
+    <div id="main-content">
+        <!-- Menü Bölümü -->
+        <div class="menu">
+            <button id="registerBtn">Kayıt Ol</button>
+            <button id="dataEntryBtn">Veri Girişi</button>
+            <button id="viewDataBtn">Veri Görüntüle</button>
+        </div>
+
+        <!-- Kayıt Ol Sekmesi -->
+        <div id="register-section" class="section hidden">
+            <h2>Öğrenci veya Okul Kaydı</h2>
+            <button id="studentRegisterBtn">Öğrenci Kaydı</button>
+            <button id="schoolRegisterBtn">Okul Kaydı</button>
+        </div>
+
+        <!-- Öğrenci Kaydı -->
+        <div id="student-register" class="section hidden">
+            <h2>Öğrenci Kayıt Formu</h2>
+            <form id="student-register-form">
+                <input type="text" id="studentName" placeholder="Ad Soyad" required>
+                <input type="email" id="studentEmail" placeholder="E-posta" required>
+                <input type="text" id="studentPhone" placeholder="Telefon Numarası" required>
+                <input type="text" id="studentSchool" placeholder="Okul Adı" required>
+                <input type="text" id="studentClass" placeholder="Sınıf" required>
+                <input type="submit" value="Kaydı Tamamla">
+            </form>
+        </div>
+
+        <!-- Okul Kaydı -->
+        <div id="school-register" class="section hidden">
+            <h2>Okul Kayıt Formu</h2>
+            <form id="school-register-form">
+                <input type="text" id="schoolProvince" placeholder="İl" required>
+                <input type="text" id="schoolDistrict" placeholder="İlçe" required>
+                <input type="text" id="schoolName" placeholder="Okul Adı" required>
+                <input type="password" id="schoolPassword" placeholder="Okul Şifresi" required>
+                <input type="submit" value="Kaydı Tamamla">
+            </form>
+        </div>
+
+        <!-- Veri Girişi -->
+        <div id="waste-entry" class="section hidden">
+            <h2>Veri Girişi</h2>
+            <form id="waste-entry-form">
+                <input type="text" id="wasteType" placeholder="Atık Türü" required>
+                <input type="number" id="wasteAmount" placeholder="Atık Miktarı (kg)" required>
+                <input type="submit" value="Veriyi Kaydet">
+            </form>
+        </div>
+
+        <!-- Veri Görüntüleme -->
+        <div id="student-data" class="section hidden">
+            <h2>Öğrenci Verileri</h2>
+            <p id="totalWaste">Toplam Atık: 0 kg</p>
+            <p id="totalPoints">Toplam Puan: 0</p>
+            <p id="wasteTypes">Atık Türleri: Yok</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Torbalı Anadolu Lisesi Ekolojik Kredi Sistemi</p>
+    </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
